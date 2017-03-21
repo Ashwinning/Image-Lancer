@@ -12,7 +12,7 @@ docker build -t php-test .
 
 - To run a container:
 ```bash
-docker run -p 80:80 -v $(pwd):/var/www/html -it php-test /bin/bash
+docker run -p 80:80 -v $(pwd):/var/www/html -it php-test
 ```
 
-- To run commands inside the container run `EXEC` from Kitematic.
+- To run commands inside the container run `EXEC` from Kitematic, or use the `docker exec` command.
