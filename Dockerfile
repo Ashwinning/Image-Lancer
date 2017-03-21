@@ -18,7 +18,8 @@ RUN apt-get install -y libfontconfig1 libfontconfig1-dev
 RUN cd ~
 RUN export PHANTOM_JS="phantomjs-2.1.1-linux-x86_64"
 RUN apt-get install wget -y
-RUN wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
+# RUN wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
+RUN tar xvjf phantomjs-2.1.1-linux-x86_64.tar.bz2
 
 # Once downloaded, move Phantomjs folder to /usr/local/share/ and create a symlink:
 
