@@ -7,13 +7,13 @@
     function GenerateJSTemplate($filename)
     {
         $jstemplate =   "var page = require('webpage').create();" .
-                        "page.open('"."files/".$filename.".html', function()" .
+                        "page.open('files/".$filename.".html', function()" .
                         "{" .
-                            "page.render('".$filename.".png');" .
+                            "page.render('files/".$filename.".png');" .
                             "phantom.exit();" .
                         "});";
 
-        Save($filename . ".js", $jstemplate);
+        Save("files/".$filename . ".js", $jstemplate);
     }
 
     /*
@@ -52,7 +52,7 @@
         GenerateJSTemplate($filename);
 
         //Execute PhantomJS Operation
-        exec('phantomjs ' . $filename . ".js");
+        exec('phantomjs files/' . $filename . ".js");
     }
 
     /*

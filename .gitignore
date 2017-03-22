@@ -1,0 +1,6 @@
+github.png
+
+# exclude inside the `files` folder
+files/*
+# but don't delete the folder itself
+!files/.gitkeep
