@@ -7,11 +7,11 @@
     function GenerateJSTemplate($filename)
     {
         $jstemplate =   "var page = require('webpage').create();";
-        if (isset($_POST['width']))
+        if (isset($_POST['height']))
         {
             $jstemplate .=  "page.viewportSize = {" .
-                            "width: ". $_POST['width'] ."," .
-                            "height: ". $_POST['height'] .
+                                "width: ". $_POST['width'] ."," .
+                                "height: ". $_POST['height'] .
                             "};";
         }
         $jstemplate .=  "page.open('files/".$filename.".html', function()" .
