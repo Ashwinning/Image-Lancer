@@ -6,8 +6,15 @@
     */
     function GenerateJSTemplate($filename)
     {
-        $jstemplate =   "var page = require('webpage').create();" .
-                        "page.open('files/".$filename.".html', function()" .
+        $jstemplate =   "var page = require('webpage').create();";
+        if (isset($_POST['width']))
+        {
+            $jstemplate .=  "page.viewportSize = {" .
+                            "width: ". $_POST['width'] ."," .
+                            "height: ". $_POST['height'] .
+                            "};";
+        }
+        $jstemplate .=  "page.open('files/".$filename.".html', function()" .
                         "{" .
                             "page.render('files/".$filename.".png');" .
                             "phantom.exit();" .
