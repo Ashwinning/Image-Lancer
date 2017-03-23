@@ -27,7 +27,7 @@
         {
             $jstemplate .=  "page.open('files/".$filename.".html', function()";
         }
-        
+
         if ($_POST['type'] == 'render-url')
         {
             $jstemplate .=  "page.open('".$_POST['content']."', function()";
@@ -115,10 +115,5 @@
     {
         file_put_contents($filename,$content);
     }
-
-
-
-
-
 
 ?>
